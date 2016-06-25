@@ -1,0 +1,18 @@
+<div id="bgImage">
+</div>
+<div class="container-fluid">
+    <div class="row"  id="containerwa" style="height: 100%" >
+        <div id="work" class="col-sm-6 col-md-6" [ngClass]="stateworks" style="height:100%">
+                <h2 (click)="openworks()"> Left </h2>
+                <p [ngClass]="leftwordexp"> A glimpse into my left hemisphere :</p>
+                <p [ngClass]="leftwordexp" style="margin-top: 65px"> Studies and Works</p>
+               <h2 [ngClass]="enterworks">Go in</h2>
+        </div>
+        <div id="art"  class="col-sm-6 col-md-6" [ngClass]="statearts" style="height:100%">
+                <h2 (click)="openarts()">Right</h2>
+                <p [ngClass]="righwordexp"> A glimpse into my right hemisphere :</p>
+                <p [ngClass]="righwordexp" style="margin-top: 65px"> Words and Images </p>
+                <h2 [ngClass]="enterarts">Go in</h2>
+        </div>
+    </div>
+</div>
