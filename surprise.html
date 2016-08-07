@@ -1,0 +1,154 @@
+<html lang="en" ng-app="myApp" xmlns:margin-top="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Gianpaolo Basilicò</title>
+    <style>
+        .eye,.pupilla{
+            border-radius: 85947698547894px;
+        }
+        .eye{
+            background: white;
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            position: absolute;
+            top: 27%;
+        }
+        .eye.dx{
+            left: 485px;
+            z-index: 3;
+        }
+        .eye.sx{
+            left: 440px;
+            z-index: 2;
+        }
+        .pupilla{
+            width: 24%;
+            height: 24%;
+            background: #000000;
+            margin-top: 41%;
+            margin-left: 35%;
+        }
+        .naso{
+            width: 37px;
+            height: 20px;
+            background: #FFEB3B;
+            margin-top: 294px;
+            margin-left: 438px;
+            position: absolute;
+            border-top-left-radius: 11px;
+            border-bottom-left-radius: 11px;
+            border: 2px solid black;
+            border-right: 0px;
+            z-index: 4;
+        }
+        .testa{
+            width: 109px;
+            background: #ffeb3b;
+            height: 168px;
+            position: absolute;
+            margin-left: 442px;
+            margin-top: 181px;
+            border-radius: 56px;
+            border: 2px solid black;
+            border-bottom-right-radius: 0;
+            z-index: 0;
+            border-bottom-left-radius: 44px;
+        }
+        .sopracciglio{
+            width: 13px;
+            height: 13px;
+            background: #ffeb3b;
+            position: absolute;
+            z-index: 1;
+            margin-top: 248px;
+            border-radius: 30px;
+            margin-left: 437px;
+            border-left: 2px solid black;
+            transform: rotate(23deg);
+        }
+        .orecchio{
+            width: 15px;
+            height: 17px;
+            background: #ffeb3b;
+            position: absolute;
+            z-index: 1000;
+            margin-top: 303px;
+            border: 2px solid black;
+            margin-left: 545px;
+            border-radius: 75px;
+            border-left: 0;
+            border-top: 1px solid black;
+        }
+        .internoroecchio{
+            width: 6px;
+            height: 3px;
+            border-radius: 100%;
+            transform: rotate(-91deg);
+            border-bottom: 1px solid black;
+            position: absolute;
+            z-index: 3;
+            margin-top: 6px;
+            margin-left: 6px;
+        }
+        .internoroecchio2{
+            width: 5px;
+            height: 3px;
+            margin-top: 6px;
+            margin-right: 4px;
+            margin-left: 6px;
+            border-radius: 100%;
+            transform: rotate(-5deg);
+            border-top: 1px solid black;
+        }
+        .bocca {
+            position: absolute;
+            width: 96px;
+            height: 65px;
+            margin-top: 315px;
+            background: #bda868;
+            margin-left: 439px;
+            border-radius: 42px;
+            transform: rotate(-5deg);
+            border: 2px solid black;
+        }
+        .capello1{
+            position: absolute;
+            width: 32px;
+            height: 30px;
+            margin-top: 176px;
+            margin-left: 472px;
+            z-index: 4;
+            border-radius: 100%;
+            border-top: 2px solid black;
+        }
+        .capello2{
+            position: absolute;
+            width: 32px;
+            height: 25px;
+            margin-top: 176px;
+            margin-left: 487px;
+            z-index: 4;
+            border-radius: 100%;
+            border-top: 2px solid black;
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+<body>
+<div class="capello1"></div>
+<div class="capello2"></div>
+<div class="testa"></div>
+<div class="sopracciglio"></div>
+<div class="orecchio">
+    <div class="internoroecchio"></div>
+    <div class="internoroecchio2"></div>
+</div>
+<div class="eye sx"><div class="pupilla"></div></div>
+<div class="eye dx"><div class="pupilla"></div></div>
+<div class="naso"></div>
+<div class="bocca"></div>
+
+
+</body>
+</html>

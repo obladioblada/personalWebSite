@@ -1,0 +1,25 @@
+body { font-family: Lato;
+}
+
+#containerwa{
+    width: 100%;
+    height:100%;
+    position: absolute;
+}
+
+#bgleftImage {
+    width: 100%; height: 100%; top: 0; left: 0;
+    background: url(../img/Lbrain.jpg) no-repeat center top; position: fixed; z-index: -1;
+    background-color: #707271;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#leftconteiner{
+    height: 100%;
+    border: solid 1px white;
+}
+
+
