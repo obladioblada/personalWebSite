@@ -4,6 +4,7 @@ myAppModule.controller('RightCtrl',function ($scope,$rootScope,$state,$window) {
         $scope.storage = firebase.storage();
         $scope.storageRef = $scope.storage.ref();
         $scope.fotoRef = $scope.storageRef.child('foto');
+        $scope.makeblur=false;
 
         $scope.goToLeft=function () {
             $state.transitionTo('leftbrain');
@@ -42,10 +43,18 @@ myAppModule.controller('RightCtrl',function ($scope,$rootScope,$state,$window) {
         $("#myModal").modal();
     }
 
-    $scope.setfotoselected=function (url) {
-        console.log(url);
-        $scope.fotoselectedurl=url;
-    }
+    $scope.setfotoselected=function (foto) {
+        console.log(foto.url);
+        $scope.fotoselectedurl=foto;
+    };
+
+
+    $scope.makebackgroundblurred=function(state){
+        $scope.makeblur=state;
+        console.log("blur" + $scope.makeblur);
+
+    };
+
 
 
 

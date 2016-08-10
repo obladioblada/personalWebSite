@@ -1,0 +1,80 @@
+<div id="bgrightImage" style="overflow: hidden">
+</div>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <i class="fa fa-2x fa-font text-picture" style="color: #1b6d85" aria-hidden="true" data-ng-click="goToRightTesti()"></i>
+            <i class="fa fa-2x fa-picture-o active text-picture" aria-hidden="true" data-ng-click="goToRightFoto()"></i>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li >
+                <a href="#">CONTACT </a>
+            </li>
+
+            <li >
+                <a data-ng-click="goToCV()">CURRICULUM VITAE </a>
+            </li>
+            <li >
+                <a href="#">ABOUT</a>
+            </li>
+            <li >
+                <a href="#">BRAIN</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="rightconteiner" style="border: none" ng-class="makeblur ? 'blur': ''">
+        <div ng-if="!testicaricati">
+            <h1 class="loadingtext"> Loading texts </h1>
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+        <ul class="listcont" ng-if="testicaricati">
+            <li ng-repeat="testo in listatesti track by $index" ng-if="testicaricati==true">
+                <figure >
+                    <div class="detaileven titolotesto"  data-toggle="modal" data-target="#myModal" data-ng-click="makebackgroundblurred(true); setfotoselected(testo)">
+                        <div class="titolo">{{testo.titolo}}</div>
+                    </div>
+                </figure>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="margin: 0;">
+
+        <!-- Modal content-->
+        <div class="mediacontent">
+            <div class="modal-body">
+                <div class="detaileven" style="height: 100px;
+    margin-top: 5%;
+    margin-bottom: 5%;">
+                    <ul class="row" style="list-style-type: none">
+                        <li class="col-md-4 col-lg-4 col-sm-4 col-xs-4 buttonsharecontainer" >
+                        </li>
+                        <li class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                            <div class="descrizione tit">{{testoselected.titolo}}</div>
+                        </li>
+                        <li class="col-md-4 col-lg-4 col-sm-4 col-xs-4" style="height: 100%">
+                        </li>
+                    </ul>
+                </div>
+                <div class="row" style="margin-bottom: 100px">
+                    <p class="testocontainer" ng-bind-html="deliberatelyTrustDangerousSnippet(testoselected.testo)"></p>
+                </div>
+                <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <i class="fa fa-3x fa-times-circle  xbutton" aria-hidden="true"  data-dismiss="modal" data-ng-click="makebackgroundblurred(false)"></i>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -29,6 +29,13 @@ body { font-family: Lato;
     height: 100%;
 }
 
+#rightconteiner.blur{
+    filter: blur(20px);
+}
+
+
+
+
 .listcont{
     list-style-type: none;
     display: flex;
@@ -165,17 +172,18 @@ figure img {
 .modal-body{
     width: 100%;
     text-align: center;
-    height: 90%;
+    height: 100%;
 }
 
 .fullscreenfoto{
     display: block;
-    max-width:1000px;
-    max-height:1000px;
-    width: auto;
+    max-width:900px;
+    max-height:900px;
+    width: 60%;
     height: auto;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 2%;
+    opacity: 1;
 
 
 }
@@ -202,19 +210,46 @@ figure img {
 
 }
 .modal-content{
-    background-color: black;
+    background-color: transparent;
     opacity: 10;
-    width: 98%;
-    height: 98%;
     display: block;
+    border: transparent;
 }
 
 .modal-footer {
-    padding: 15px;
     text-align: right;
     border:none;
+    height: 100px;
 }
-.fade{}
+.modal.fade{
+    -webkit-transition:opacity .3s linear, top .3s ease-out;
+    -moz-transition:opacity .3s linear, top .3s ease-out;
+    -ms-transition:opacity .3s linear, top .3s ease-out;
+    -o-transition:opacity .3s linear, top .3s ease-out;
+    transition:opacity .3s linear, top .3s ease-out;
+    border: transparent;
+}
 
 
+.exit{
+    cursor: pointer;
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 0px;
+}
 
+.buttonsharecontainer{
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+    margin-top: 20px;
+    position: relative;
+
+}
+
+.buttonforshare{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
