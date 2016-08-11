@@ -39,7 +39,7 @@ myAppModule.controller('RightCtrlTesti',function ($scope,$rootScope,$state,$wind
         $scope.loadFoto=function () {
             $scope.listatesti=[];
             $scope.testicaricati=false;
-            console.log("fotocaricate before" + $scope.testicaricati);
+            console.log("testi before" + $scope.testicaricati);
                 firebase.database().ref('/poesie/').once('value').then(function(snapshot) {
                 snapshot.forEach(function(childSnapshot) {
                     $scope.testo=childSnapshot.val();
