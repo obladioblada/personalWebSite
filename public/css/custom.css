@@ -1,0 +1,324 @@
+body {
+}
+
+#containerwa{
+    width: 100%;
+    height:100%;
+    position: absolute;
+}
+
+#bgImage {
+    width: 100%; height: 100%; top: 0; left: 0;
+    background: url(../img/RLbrain.jpeg) no-repeat center center;
+    background-color: #707271;
+    position: fixed; z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: contain;
+}
+
+
+
+
+
+#work.opened{
+    height: 100%;
+    padding:0;
+    color:white;
+    font-weight: 200;
+    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+    background-position:right bottom;
+    background-size: 300% 100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    padding-top: 100px;
+
+}
+
+#art.opened{
+    height: 100%;
+    color: white;
+    padding:0;
+    font-weight: 200;
+    background: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+    background-position:left bottom;
+    background-size: 300% 100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    padding-top: 100px;
+}
+
+
+
+
+#art h2.closed{
+    border-bottom: solid 1px;
+    font-weight: lighter;
+    width: 40%;
+    float: right;
+    margin-right: 10%;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    font-size: 2em;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+
+}
+
+ #work h2.closed{
+    border-bottom: solid 1px;
+    font-weight: lighter;
+    width: 40%;
+    float: right;
+    margin-right: 10%;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    font-size: 2em;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+
+}
+#art h2.opened{
+    margin-right: 30%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+   #work h2.opened{
+     margin-left:30%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#work h2 {
+    float: left;
+    margin-left: 10%;
+}
+#art h2:hover, #work h2:hover {
+    font-size: 2.2em;
+
+}
+
+
+
+.enterartclosed{
+    bottom: 100px;
+    position: absolute;
+    color: transparent;
+    width: 40% !important;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out ;
+    visibility: hidden;
+    right: 0;
+
+
+}
+
+
+.enterartopened{
+
+    bottom: 100px;
+    position: absolute;
+    color: white;
+    width: 40% !important;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    margin-bottom: 100px;
+    right: 20%;
+
+}
+
+#work.closed{
+    height: 100%;
+    padding:0;
+    color:white;
+    font-weight: 200;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s cubic-bezier(0.01, 1.11, 1, 0.99);
+    background-position:left bottom;
+    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+    background-size: 300% 100%;
+
+
+}
+
+#art.closed{
+    height: 100%;
+    padding:0;
+    color: white;
+    font-weight: 200;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s cubic-bezier(0.01, 1.11, 1, 0.99);
+    background: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+    background-size: 300% 100%;
+    background-position: right bottom;
+}
+
+#work.opened{
+    height: 100%;
+    padding:0;
+    color:white;
+    font-weight: 200;
+    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+    background-position:right bottom;
+    background-size: 300% 100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    padding-top: 100px;
+
+}
+
+#art.opened{
+    height: 100%;
+    color: white;
+    padding:0;
+    font-weight: 200;
+    background: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+    background-position:left bottom;
+    background-size: 300% 100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    padding-top: 100px;
+}
+
+
+
+
+#art h2, #work h2{
+    border-bottom: solid 1px;
+    font-weight: lighter;
+    width: 40%;
+    float: right;
+    margin-right: 10%;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    font-size: 2em;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+
+
+}
+
+
+.enterworkclosed{
+    bottom: 100px;
+    position: absolute;
+    color: transparent;
+    width: 40% !important;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out ;
+    visibility: hidden;
+    left: 0;
+}
+
+
+.enterworkopened{
+
+    bottom: 100px;
+    position: absolute;
+    color: white;
+    width: 40% !important;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    margin-bottom: 100px;
+    left: 20%;
+
+}
+
+
+
+.explenationworld{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    visibility: hidden;
+
+}
+
+.explenationworldopend{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    font-size: 30px;
+}
+
+
+.navbar{
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: inherit;
+}
+
+.navbar-nav{
+    width: 85%;
+}
+
+.navbar-nav>li{
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar-nav>li>a{
+    cursor: pointer;
+}
+
+.navbar-nav>li>a:hover{
+    cursor: pointer;
+    color: white;;
+}
+
