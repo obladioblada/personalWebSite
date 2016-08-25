@@ -1,31 +1,29 @@
-<div id="bgrightImage" style="overflow: hidden">
+<div id="bgrightImage" style="overflow: hidden" >
 </div>
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <i class="fa fa-2x fa-font text-picture" aria-hidden="true" data-ng-click="goToRightTesti()"></i>
-            <i class="fa fa-2x fa-picture-o active text-picture" style="color: #1b6d85" aria-hidden="true" data-ng-click="goToRightFoto()"></i>
+            <i class="fa fa-2x fa-font text-picture" aria-hidden="true" ui-sref="rightbraintesti"></i>
+            <i class="fa fa-2x fa-picture-o active text-picture" style="color: #1b6d85" aria-hidden="true" ui-sref="rightbrain"></i>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li >
-                <a href="#">CONTACT </a>
+                <a ui-sref="brain">BRAIN</a>
             </li>
 
             <li >
                 <a data-ng-click="goToCV()">CURRICULUM VITAE </a>
             </li>
+
             <li >
-                <a href="#">ABOUT</a>
-            </li>
-            <li >
-                <a href="#">BRAIN</a>
+                <a ui-sref="contatc">CONTACT </a>
             </li>
         </ul>
     </div>
 </nav>
 
-<div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="rightconteiner" style="border: none" ng-class="makeblur ? 'blur': ''">
+<div class="row" style="padding-top: 100px;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="rightconteiner" style="border: none">
         <div ng-if="!fotocaricate">
             <div class="spinner">
                 <div class="double-bounce1"></div>
@@ -36,12 +34,12 @@
             <li ng-repeat="foto in listafoto track by $index" ng-if="fotocaricate=true">
                 <figure ng-class="{ 'even': $even, 'odd': $odd }">
                     <div class="detailodd" ng-if="$odd">
-                        <div class="descrizione">{{foto.descrizione}}</div>
-                        <div class="luogo">{{foto.luogo}}</div></div>
-                    <img src="{{foto.urlmin}}" alt="image" class="thumbnail" data-toggle="modal" data-target="#myModal" data-ng-click="setfotoselected(foto); makebackgroundblurred(true)">
+                        <div class="descrizione">{{::foto.descrizione}}</div>
+                        <div class="luogo">{{::foto.luogo}}</div></div>
+                    <img data-src="{{::foto.urlmin}}" ng-if="fotocaricate=true" alt="image" class="thumbnail lazyload" data-toggle="modal" data-target="#myModal" data-ng-click="setfotoselected(foto);">
                     <div class="detaileven" ng-if="$even">
-                        <div class="descrizione">{{foto.descrizione}}</div>
-                        <div class="luogo">{{foto.luogo}}</div>
+                        <div class="descrizione">{{::foto.descrizione}}</div>
+                        <div class="luogo">{{::foto.luogo}}</div>
                     </div>
                 </figure>
             </li>
@@ -52,28 +50,28 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog" >
     <div class="modal-dialog" style="margin: 0;">
 
         <!-- Modal content-->
         <div class="mediacontent">
             <div class="media-body">
-                <div class="detaileven" style="height: 100px;
+                <div class="detaileven" style="min-height: 100px;
     margin-top: 5%;
     margin-bottom: 5%;">
-                    <ul class="row" style="list-style-type: none">
-                        <li class="col-md-4 col-lg-4 col-sm-4 col-xs-4 buttonsharecontainer" >
-                        </li>
-                        <li class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
-                            <div class="descrizione tit">{{fotoselectedurl.descrizione}}</div>
-                        </li>
-                        <li class="col-md-4 col-lg-4 col-sm-4 col-xs-4" style="height: 100%">
-                            <div style="font-size: x-large; margin-top: 55px;" class="luogo">{{fotoselectedurl.luogo}}</div>
-                        </li>
-                    </ul>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <h1 class="descrizione tit">{{::fotoselectedurl.descrizione}}</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <h2 class="luogo">{{::fotoselectedurl.luogo}}</h2>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
-                    <img src="{{fotoselectedurl.url}}" alt="image" class="thumbnail fullscreenfoto">
+                    <img src=" {{::fotoselectedurl.url}} " alt="image" class="thumbnail fullscreenfoto">
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">

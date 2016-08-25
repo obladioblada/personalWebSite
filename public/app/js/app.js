@@ -46,24 +46,14 @@ var myAppModule = angular.module('myApp',["firebase",'ui.router'])
                 $scope.leftwordexp='explenationworld';
             }
         };
-
-        /**
-         *
-         * change state
-         */
-     $scope.goToLeft=function () {
-            $state.transitionTo('leftbrain');
-        };
-        $scope.goToRight=function () {
-            $state.transitionTo('rightbrain');
-        };
-
-
-
       })
     .config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/brain");
-
+        $stateProvider.state('contatc',{
+            url:'/contact',
+            templateUrl:'template/contact.html',
+            controller:'ContactCtrl'
+        })
         $stateProvider.state('brain',{
             url:'/brain',
             templateUrl:'template/brain.html',

@@ -16,6 +16,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: contain;
+    -webkit-filter: grayscale(30%); /* Chrome, Safari, Opera */
+    filter: contrast(50%) grayscale(30%);
 }
 
 
@@ -304,12 +306,16 @@ body {
     border-radius: inherit;
 }
 
+.navbar-header{
+    float: right;
+}
+
 .navbar-nav{
-    width: 85%;
+    float: left !important;
 }
 
 .navbar-nav>li{
-    float: right;
+    float: left;
     margin-right: 20px;
 }
 

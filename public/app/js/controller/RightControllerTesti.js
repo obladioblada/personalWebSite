@@ -4,7 +4,6 @@ myAppModule.controller('RightCtrlTesti',function ($scope,$rootScope,$state,$wind
         $scope.storage = firebase.storage();
         $scope.storageRef = $scope.storage.ref();
         $scope.fotoRef = $scope.storageRef.child('poesie');
-        $scope.makeblur=false;
         $scope.testicaricati=false;
 
         $scope.goToLeft=function () {
@@ -65,12 +64,6 @@ myAppModule.controller('RightCtrlTesti',function ($scope,$rootScope,$state,$wind
         $scope.testoselected=testo;
     };
 
-
-    $scope.makebackgroundblurred=function(state){
-        $scope.makeblur=state;
-        console.log("blur" + $scope.makeblur);
-
-    };
 
 
 

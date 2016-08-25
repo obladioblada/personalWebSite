@@ -4,22 +4,6 @@ myAppModule.controller('RightCtrl',function ($scope,$rootScope,$state,$window) {
         $scope.storage = firebase.storage();
         $scope.storageRef = $scope.storage.ref();
         $scope.fotoRef = $scope.storageRef.child('foto');
-        $scope.makeblur=false;
-
-        $scope.goToLeft=function () {
-            $state.transitionTo('leftbrain');
-        };
-
-
-        $scope.goToRightFoto=function () {
-            console.log($state.current.name);
-            $state.transitionTo('rightbrain');
-        };
-
-        $scope.goToRightTesti=function () {
-            console.log($state.current.name);
-            $state.transitionTo('rightbraintesti');
-        };
 
         $scope.goToCV=function () {
             console.log("dentro gotoCV" );
@@ -58,16 +42,6 @@ myAppModule.controller('RightCtrl',function ($scope,$rootScope,$state,$window) {
         console.log(foto.url);
         $scope.fotoselectedurl=foto;
     };
-
-
-    $scope.makebackgroundblurred=function(state){
-        $scope.makeblur=state;
-        console.log("blur" + $scope.makeblur);
-
-    };
-
-
-
 
     }
 );
