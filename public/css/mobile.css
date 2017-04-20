@@ -1,0 +1,363 @@
+
+@media only screen and (max-width: 850px) {
+    /* For mobile phones: */
+
+    .listcont>li{
+        flex-grow: 0;
+        flex-basis: 98%;
+        margin: 5px;
+        border: white solid 2px;
+    }
+
+    .navbar-header {
+        float: right;
+    }
+
+
+    .navbar-nav>li>a {
+        font-size: 0.7em;
+    }
+
+
+    #bgImage {
+        width: 100%; height: 100%; top: 0; left: 0;
+        background: url(../img/RLbrain.jpeg) no-repeat center center;
+        background-color: #707271;
+        position: fixed; z-index: -1;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: contain;
+        -webkit-filter: grayscale(30%); /* Chrome, Safari, Opera */
+        filter: contrast(50%) grayscale(30%);
+    }
+
+
+    #work.opened{
+        height: 100%;
+        padding:0;
+        color:white;
+        font-weight: 200;
+        background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+        background-position:right bottom;
+        background-size: 300% 100%;
+        padding-top: 100px;
+        font-size: 1em;
+
+    }
+
+    #art.opened{
+        height: 100%;
+        color: white;
+        padding:0;
+        font-weight: 200;
+        background: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+        background-position:left bottom;
+        background-size: 300% 100%;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none ;
+        padding-top: 100px;
+        font-size: 1em;
+    }
+
+
+
+
+    #art h2.closed{
+        border-bottom: solid 1px;
+        font-weight: lighter;
+        width: 40%;
+        float: right;
+        margin-right: 10%;
+        text-align: center;
+        margin-top: 100px;
+        padding-bottom: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none ;
+        transition: none;
+
+    }
+
+    #work h2.closed{
+        border-bottom: solid 1px;
+        font-weight: lighter;
+        width: 40%;
+        float: right;
+        margin-right: 10%;
+        text-align: center;
+        margin-top: 100px;
+        padding-bottom: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition:none;
+        transition:none;
+
+    }
+    #art h2.opened{
+        margin-right: 30%;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+
+    #work h2.opened{
+        margin-left:30%;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+
+    #work h2 {
+        float: left;
+        margin-left: 10%;
+        font-size: 1em;
+    }
+    #art h2:hover, #work h2:hover {
+        font-size: 1em;
+
+    }
+
+
+
+    .enterartclosed{
+        bottom: 100px;
+        position: absolute;
+        color: transparent;
+        width: 40% !important;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        -ms-transition: none;
+        transition: none ;
+        visibility:visible;
+        right: 0;
+
+
+    }
+
+
+    .enterartopened{
+
+        bottom: 100px;
+        position: absolute;
+        color: white;
+        width: 40% !important;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+        margin-bottom: 100px;
+        right: 20%;
+
+    }
+
+    #work.closed{
+        height: 100%;
+        padding:0;
+        color:white;
+        font-weight: 200;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+        background-position:left bottom;
+        background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+        background-size: 300% 100%;
+
+
+    }
+
+    #art.closed{
+        height: 100%;
+        padding:0;
+        color: white;
+        font-weight: 200;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+        background: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+        background-size: 300% 100%;
+        background-position: right bottom;
+    }
+
+    #work.opened{
+        height: 100%;
+        padding:0;
+        color:white;
+        font-weight: 200;
+        background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+        background-position:right bottom;
+        background-size: 300% 100%;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+        padding-top: 100px;
+
+    }
+
+    #art.opened{
+        height: 100%;
+        color: white;
+        padding:0;
+        font-weight: 200;
+        background: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.8) 50%);
+        background-position:left bottom;
+        background-size: 300% 100%;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+        padding-top: 100px;
+    }
+
+
+
+
+    #art h2, #work h2{
+        border-bottom: solid 1px;
+        font-weight: lighter;
+        width: 40%;
+        float: right;
+        margin-right: 10%;
+        text-align: center;
+        margin-top: 100px;
+        padding-bottom: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;
+
+
+    }
+
+
+    .enterworkclosed{
+        bottom: 100px;
+        position: absolute;
+        color: transparent;
+        width: 40% !important;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        -ms-transition: none;
+        transition: none ;
+        visibility: visible;
+        left: 0;
+        font-size: 1em;
+    }
+
+
+    .enterworkopened{
+
+        bottom: 100px;
+        position: absolute;
+        color: white;
+        width: 40% !important;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+        margin-bottom: 100px;
+        left: 20%;
+        font-size: 1em;
+    }
+
+
+
+    .explenationworld{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: transparent;
+        -webkit-transition:none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+        visibility: visible;
+
+    }
+
+    .explenationworldopend{
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        -ms-transition: none;
+        transition: none;
+        font-size: 15px;
+    }
+
+
+    .fa-2x {
+        font-size: 1.5em !important;
+        padding-top: 15px;
+    }
+
+
+
+    .projecttitle {
+        color: #111;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+        margin: 50px;
+        letter-spacing: 15px;
+    }
+
+
+    .progjectdescrition {
+        color: #111;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+        letter-spacing: 10px;
+        margin-bottom: 100px;
+    }
+
+    .imageproject {
+        width: 94%;
+        height: auto;
+        background: none;
+        border: none;
+        border-radius: 15px;
+    }
+
+
+    .linkimg {
+        margin-top: 0px;
+        cursor: pointer;
+        margin-left: 6px;
+    }
+
+    .facebook {
+        float: right;
+        margin-right: 2px;
+        margin-top: -15px;
+    }
+
+}
+
+
+

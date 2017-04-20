@@ -35,24 +35,27 @@ myAppModule.controller('RightCtrlTesti',function ($scope,$rootScope,$state,$wind
         return $sce.trustAsHtml(testo);
     };
 
-        $scope.loadFoto=function () {
+        $scope.loadTesti=function () {
             $scope.listatesti=[];
             $scope.testicaricati=false;
             console.log("testi before" + $scope.testicaricati);
                 firebase.database().ref('/poesie/').once('value').then(function(snapshot) {
                 snapshot.forEach(function(childSnapshot) {
                     $scope.testo=childSnapshot.val();
-                    $scope.listatesti.push($scope.testo)
+                    $scope.testo.testoNObr=$scope.testo.testo.replace( /<br>/g, "\n" );
+                    console.log( $scope.testo.testoNObr);
+                    $scope.listatesti.push($scope.testo);
+
                 });
+                    $scope.testicaricati=true;
                     $rootScope.$apply();
 
                 });
             console.log($scope.listatesti);
-            $scope.testicaricati=true;
             console.log("testicaricati" + $scope.testicaricati);
         };
 
-    $scope.loadFoto();
+    $scope.loadTesti();
 
 
     $scope.openfoto=function(url){

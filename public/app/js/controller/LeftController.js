@@ -1,28 +1,52 @@
 
 // declare a module
      myAppModule.controller('LeftCtrl', function ($scope,$state,$window,$rootScope) {
+         $scope.progetto={};
+         $scope.storage = firebase.storage();
+         $scope.storageRef = $scope.storage.ref();
+
+         $scope.loadProjects=function () {
+             $scope.listaprojects=[];
+             $scope.projectsLoaded=false;
+             console.log("progrects loaded before" + $scope.projectsLoaded);
+             firebase.database().ref('/progetti/').once('value').then(function(snapshot) {
+                 snapshot.forEach(function(childSnapshot) {
+                     $scope.progetto=childSnapshot.val();
+                     $scope.listaprojects.push($scope.progetto)
+                 });
+                 console.log($scope.listaprojects);
+                 $scope.projectsLoaded=true;
+                 $rootScope.$apply();
+                 console.log("projectsloaded" + $scope.projectsLoaded);
+             });
+         };
+
+         $scope.loadProjects();
+
+         $scope.goTolink=function (link) {
+                 $window.open(link);
+             };
+
          
          $scope.goToRight=function () {
              $state.transitionTo('rightbrain');
          };
 
-             var storage = firebase.storage();
-             var storageRef = storage.ref();
          $scope.goToCV=function () {
              console.log("dentro gotoCV" );
-             console.log();
-             storageRef.child('/cv/CurriculumVitae_BSLGPL92P12D423R.pdf').getDownloadURL().then(function(url) {
-                 // Get the download URL for 'images/stars.jpg'
-                 // This can be inserted into an <img> tag
-                 // This can also be downloaded directly
-                 console.log(url);
-                 $window.location.href = url;
+             console.log($scope.storageRef );
+             $scope.storageRef.child('cv/CurriculumVitae_BSLGPL92P12D423R.pdf').getDownloadURL().then(function(url) {
+                 $window.open(url);
              }).catch(function(error) {
-                 // Handle any errors
                  console.log(error);
              });
-             // $state.transitionTo('curriculumvitae');
          };
-         
+
+         $scope.goToDownload=function (link) {
+             console.log(link);
+             $window.open(link);
+         };
+
+
       }
     );

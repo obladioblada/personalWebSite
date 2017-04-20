@@ -1,20 +1,32 @@
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 <head>
+    <title> Gianpaolo Basilicò </title>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gianpaolo Basilicò</title>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
     <link rel="stylesheet" href="bootstrap-3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/leftbrain.css">
     <link rel="stylesheet" href="css/rightbrain.css">
-    <link rel="stylesheet" href="css/rightbrain.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
     <!-- 2. Load our 'modules' -->
     <!-- AngularFire -->
 </head>
-<body style="min-height: 500px; background-color: gray;" ng-app="myApp">
+<body style="min-height: 500px; background-color: gray;" >
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8&appId=1092136894234518";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div ui-view>
 </div>
 </body>
@@ -23,6 +35,7 @@
 <script src="app/js/lib/angular.min.js"></script>
 <script src='app/js/lib/angular-ui-router.min.js'></script>
 <script src='app/js/lib/lazysizes.min.js'></script>
+<script src='app/js/lib/angular-socialshare.js'></script>
 <script src='app/js/app.js'></script>
 <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
 <script src="app/js/initializefirebase.js"></script>

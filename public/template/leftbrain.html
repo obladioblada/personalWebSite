@@ -6,7 +6,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li >
-                <a ui-sref="brain">BRAIN</a>
+                <img src="img/rBrain2.png" alt="Smiley face"  class="linkimg" height="42" width="42" ui-sref="rightbrain">
             </li>
 
             <li >
@@ -21,11 +21,22 @@
 </nav>
 <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="leftconteiner">
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/TkmEh3s7HdM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div>
+        <ul class="listcont" ng-if="projectsLoaded">
+            <li class="progetti" ng-repeat="progetto in listaprojects" ng-if="projectsLoaded=true">
+                <figure ng-class="{ 'evenproject': $even, 'oddproject': $odd }" style="min-height: 300px;">
+                    <h1 class="projecttitle"> {{::progetto.name}}</h1>
+                    <div>
+                        <div class="progjectdescrition">{{::progetto.descrizione}}</div>
+                    </div>
+                    <img  ng-src="{{::progetto.image}}" ng-if="projectsLoaded=true" alt="image" class="thumbnail lazyload imageproject">
+                    <div>
+                    <i class="fa fa-4x fa-youtube-play linkicon" aria-hidden="true" ng-if="progetto.video" data-ng-click="goTolink(progetto.linkvideo)"></i>
+                    <i class="fa  fa-4x  fa-github linkicon" aria-hidden="true" ng-if="progetto.git" data-ng-click="goTolink(progetto.linkgit)"></i>
+                    <i class="fa  fa-4x fa-cloud-download" aria-hidden="true" ng-if="progetto.download" data-ng-click="goToDownload(progetto.linkdownload)"></i>
+                    </div>
+                </figure>
+            </li>
+        </ul>
 
-        </div>
     </div>
 </div>

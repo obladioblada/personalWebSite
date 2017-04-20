@@ -1,6 +1,6 @@
 
 // declare a module
-var myAppModule = angular.module('myApp',["firebase",'ui.router'])
+var myAppModule = angular.module('myApp',["firebase",'ui.router', '720kb.socialshare'])
     .constant("FBURL","https://gianpaolobasilico-6c7c8.firebaseio.com/")
     .constant("POESIEURL","https://gianpaolobasilico-6c7c8.firebaseio.com/poesie/")
     .constant("FOTOURL","https://gianpaolobasilico-6c7c8.firebaseio.com/foto/")

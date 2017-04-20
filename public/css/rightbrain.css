@@ -21,13 +21,15 @@ body { font-family: Lato;
 }
 
 #rightconteiner{
-    border: solid 1px white;
     display: inline-flex;
-    margin: 3%;
     text-align: center;
     align-content: center;
     height: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
+
 
 #rightconteiner.blur{
     background-color: black;
@@ -44,12 +46,15 @@ body { font-family: Lato;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    padding-left: 0px;
 }
 .listcont>li{
     flex-grow: 0;
-    flex-basis: 30%;
+    flex-basis: 32%;
     margin: 5px;
     border: white solid 2px;
+    border-radius: 10px;
+
 }
 
 figure {
@@ -78,7 +83,7 @@ figure {
       margin-bottom: 15px;
       padding: 10px;
       width: 100%;
-    border-radius: 3px;
+    border-radius: 10px;
 
 }
 
@@ -87,7 +92,7 @@ figure {
     margin-top: 15px;
     padding: 10px;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 10px;
 
 }
 
@@ -179,8 +184,10 @@ figure img {
     width: 100%;
     margin: auto;
     margin-top: 25px;
-    font-size: x-large;
+    color: white;
+
 }
+
 .luogo{
     float: right;
     font-size: initial;
@@ -204,19 +211,18 @@ figure img {
 }
 
 .fullscreenfoto{
+    border: none;
     display: block;
-
     height: auto;
     margin: auto;
-    margin-top: 2%;
-    opacity: 1;
     opacity: 1;
     max-width: calc(100vw - 0px);
     max-height: calc(100vh - 0px);
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
-
-
+    padding: 0;
+    border-radius: 0;
 }
+
 .modal-dialog{
     position: absolute;
     margin: 10px;
@@ -306,24 +312,84 @@ figure img {
 
 .xbutton{
     color: white;
-    margin: auto;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    cursor: pointer;
+    position: fixed;
+    bottom:1%;
+
+}
+
+.xbuttontext{
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom:1%;
+
+}
+
+
+
+
+
+i.fa.ng-scope {
+    cursor: pointer;
+}
+
+.arrowcontainer{
+    background: rgba(0, 0, 0, 0.72);;
+    height: 60px;
+    position: fixed;
+    bottom: 0%;
+    margin: 0;
+    padding: 0;
+    right: 0px;
+    left: 0px;
+
+}
+
+.titlecontainer{
+    background: rgba(0, 0, 0, 0.72);;
+    height: 60px;
+    position: fixed;
+    top: 0%;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+}
+.arrowphoto{
+    color:white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.arrowphoto.right{
+    font-size: 3em;
+    position: fixed;
+    bottom:0%;
+    right: 1%;
+}
+
+
+.arrowphoto.left{
+    font-size: 3em;
+    position: fixed;
+    bottom:0%;
+    left: 1%;
+}
+
+
+.facebook{
+    float: right;
+    margin-right: 100px;
+    margin-top: -30px;
+    color: #4267b2;
     cursor: pointer;
 }
 
 
-
-
-@media only screen and (max-width: 850px) {
-    /* For mobile phones: */
-    .listcont>li{
-        flex-grow: 0;
-        flex-basis: 98%;
-        margin: 5px;
-        border: white solid 2px;
-    }
+.linkimg{
+    margin-top: 6px;
+    cursor: pointer;
 }
-
-
-
